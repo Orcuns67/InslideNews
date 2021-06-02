@@ -1,11 +1,17 @@
 * {box-sizing: border-box;}
 body {font-family: Verdana, sans-serif;}
 .mySlides {display: none;}
-img {    position: fixed;
-  top: 60%;
+img {   
+  position: fixed;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
   border-style: solid;
+  width: 900;
+}
+
+img {
+  max-width: 900;
 }
 
 /* Slideshow container */
@@ -35,7 +41,7 @@ img {    position: fixed;
   top: 0;
 }
 
-/* The dots/bullets/indicators */
+/* The dots/bullets/indicators 
 .dot {
   height: 15px;
   width: 15px;
@@ -45,6 +51,7 @@ img {    position: fixed;
   display: inline-block;
   transition: background-color 0.6s ease;
 }
+*/
 
 .active {
   background-color: #717171;
@@ -72,3 +79,51 @@ img {    position: fixed;
 @media only screen and (max-width: 300px) {
   .text {font-size: 11px}
 }
+
+.circle {
+  width: 200px;
+  height: 100px;
+  line-height: 100px;
+  border-radius: 50%; /* the magic */
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  text-align: center;
+  color: white;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 700;
+  /*margin: 0 auto 40px;*/
+  margin-left: 10px;
+}
+
+.blue {
+  background-color: #3498db;  
+}
+
+.square-box{
+  position: relative;
+  width: 60%;
+  overflow: hidden;
+  background: #4679BD;
+  margin-left: 300;
+  margin-top: -90px;
+  
+}
+.square-box:before{
+  width: auto;
+  height: auto;
+  margin: 0 auto;
+  padding: 10px;
+  position: relative;
+  
+}
+
+#para1 {
+  position: absolute;
+  top: 36px;
+  right: 16px;
+  font-size: 20px;
+}
+
+
+
