@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\ProjectSlide;
 use Illuminate\Http\Request;
+use App\Models\Slide;
+use App\Models\Project;
 
 class ProjectController extends Controller
 {
@@ -14,7 +15,12 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        $projects = Project::with('projectslide')->get();
-        return view ('project', compact ('projects'));
+        //
+    }
+
+    public function show($id) {
+        $projects = Project::with('slide')->where('id', $id)->First();
+        return view('slideshow',compact('projects'));
+
     }
 }
