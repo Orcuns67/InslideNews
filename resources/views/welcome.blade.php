@@ -12,6 +12,7 @@
 <body>
 <div class="companybrand"><img class="companylogo" src="/images/nike.png" />
 <span class="companytitle">Company title</span>
+<span></span>
 </div>
 <div class="content-width">
   <div class="slideshow">
