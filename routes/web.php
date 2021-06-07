@@ -18,7 +18,7 @@ Route::get('/', function () {
 });
 
 Route::get('/show/{id}','ProjectController@show');
-
+Route::get('/start/{id}','ProjectSlideController@start');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
