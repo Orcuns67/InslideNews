@@ -20,7 +20,7 @@ class ProjectSlideController extends Controller
 
     public function start($id)
     {
-        $slides = Project::with('slide')->where('id', $id)->firstOrFail();
-        return view ('start', compact ('slides'));
+        $project = Project::with('slide')->where('id', $id)->firstOrFail();
+        return view ('start', compact ('project'));
     }
 }

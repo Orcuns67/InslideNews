@@ -18,118 +18,13 @@
   <div class="slideshow">
     <!-- Slideshow Items -->
     <div class="slideshow-items">
-  @php dd($slides) @endphp
-  @foreach ($slides as $slide)
-    <div class="item">
-        <div class="item-image-container">
-          <img class="item-image" src="/images/img3.jpg" />
-        </div>
-        <!-- Staggered Header Elements -->
-        <div class="item-header">
-          <span class="vertical-part"><b>N</b></span>
-          <span class="vertical-part"><b>i</b></span>
-          <span class="vertical-part"><b>k</b></span>
-          <span class="vertical-part"><b>e</b></span>
-        </div>
-        <!-- Staggered Description Elements -->
-        <div class="item-description">
-          <span class="vertical-part">
-            <b>Title Article</b>
-          </span>
-          <span class="vertical-part">
-            <b>ipsum</b>
-          </span> 
-          <span class="vertical-part">
-            <b>dolor</b>
-          </span>
-          <span class="vertical-part">
-            <b>sit</b>
-          </span> 
-          <span class="vertical-part">
-            <b>amet,</b>
-          </span>
-          <span class="vertical-part">
-            <b>consectetur</b>
-          </span> 
-          <span class="vertical-part">
-            <b>adipiscing</b>
-          </span>
-          <span class="vertical-part">
-            <b>elit.</b>
-          </span> 
-          <span class="vertical-part">
-            <b>Pellentesque</b>
-          </span>
-          <span class="vertical-part">
-            <b>elementum</b>
-          </span> 
-          <span class="vertical-part">
-            <b>gravida</b>
-          </span>
-          <span class="vertical-part">
-            <b>ex</b>
-          </span> 
-          <span class="vertical-part">
-            <b>at</b>
-          </span>
-          <span class="vertical-part">
-            <b>maximus.</b>
-          </span> 
-          <span class="vertical-part">
-            <b>Nullam</b>
-          </span>
-          <span class="vertical-part">
-            <b>quis</b>
-          </span> 
-          <span class="vertical-part">
-            <b>leo</b>
-          </span>
-          <span class="vertical-part">
-            <b>ipsum.</b>
-          </span> 
-          <span class="vertical-part">
-            <b>Lorem</b>
-          </span>
-          <span class="vertical-part">
-            <b>ipsum</b>
-          </span> 
-          <span class="vertical-part">
-            <b>Nam</b>
-          </span> 
-          <span class="vertical-part">
-            <b>consectetur</b>
-          </span>
-          <span class="vertical-part">
-            <b>malesuada</b>
-          </span> 
-          <span class="vertical-part">
-            <b>blandit.</b>
-          </span>
-          <span class="vertical-part">
-            <b>Mauris</b>
-          </span> 
-          <span class="vertical-part">
-            <b>vulputate</b>
-          </span>
-          <span class="vertical-part">
-            <b>purus</b>
-          </span> 
-          <span class="vertical-part">
-            <b>id</b>
-          </span>
-          <span class="vertical-part">
-            <b>dolor</b>
-          </span> 
-          <span class="vertical-part">
-            <b>euismod</b>
-          </span>
-          <span class="vertical-part">
-            <b>varius.</b>
-          </span>      
-        </div>
-      </div>
-      
-    </div>
+  
+  @foreach ($project->slide as $slide)
+  
+  <img src="/storage/{{$slide->image}}">
+  {{$slide->title}}
+  {{$slide->description}}
+  
   @endforeach
 
     <div class="controls">
