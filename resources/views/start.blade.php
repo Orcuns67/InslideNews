@@ -1,58 +1,41 @@
-<!doctype html>
-<html>
+<html lang="en">
+
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="/assets/JiSlider.css">
-		<style>
-			* {
-				margin: 0;
-			}
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-			html, body {
-				height: 100%;
-			}
-
-			#JiSlider {
-				width: 100%;
-				height: 100%;
-			}
-		</style>
-    <title>jQuery JiSlider Plugin Demo</title>
+  <link href="{{ asset('/css/inslider.css') }}" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
-	<body>
-		<div id="JiSlider" class="jislider">
-			<ul>
-				@foreach ($project->slide as $slide)
-				<li>
-					<img src="/storage/{{$slide->image}}">
-					<h3>{{$slide->title}}</h3>
-					<h4>{{$slide->description}}</h4>
-				</li>
-				@endforeach
-			
-			</ul>
-		</div>
-		<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-		<script src="/assets/JiSlider.js"></script>
-		<script>
-			$(window).load(function () {
-				$('#JiSlider').JiSlider({color: '#fff', start: 3, reverse: true}).addClass('ff')
-			})
-		</script><script type="text/javascript">
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-36251023-1']);
-  _gaq.push(['_setDomainName', 'jqueryscript.net']);
-  _gaq.push(['_trackPageview']);
+<body>
 
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
+<!-- Slideshow container -->
+<div class="slideshow-container">
 
-</script>
-	</body>
+  <!-- Full-width images with number and caption text -->
+  @foreach ($project->slide as $slide)
+  <div class="mySlides fade">
+    <img src="/storage/{{$slide->image}}" width="200px" height="200px">
+    <h3>{{$slide->title}}</h3>
+    <h4>{{$slide->description}}</h4>
+  </div>
+  @endforeach
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+</body>
+
 </html>
+<script src="/javascript/inslider.js"></script>
