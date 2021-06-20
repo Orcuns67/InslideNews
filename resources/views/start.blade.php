@@ -6,35 +6,35 @@
 
   <link href="{{ asset('/css/inslider.css') }}" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Laravel Project</title>
 </head>
 
 <body>
-
+<div class="companybrand">
+<span class="companytitle">Swiss Barbers</span>
+<span></span>
+</div>
 <!-- Slideshow container -->
 <div class="slideshow-container">
 
   <!-- Full-width images with number and caption text -->
   @foreach ($project->slide as $slide)
   <div class="mySlides fade">
-    <img src="/storage/{{$slide->image}}" width="200px" height="200px">
-    <h3>{{$slide->title}}</h3>
-    <h4>{{$slide->description}}</h4>
+    <img src="/storage/{{$slide->image}}" class="imgslider">
+    <span class="textslider" >
+    <h3 class="titleslider">{{$slide->title}}</h3>
+    <h4 class="descslider">{{$slide->description}}</h4>
+  </span>
   </div>
   @endforeach
 
   <!-- Next and previous buttons -->
-  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  
 </div>
 <br>
 
 <!-- The dots/circles -->
-<div style="text-align:center">
-  <span class="dot" onclick="currentSlide(1)"></span>
-  <span class="dot" onclick="currentSlide(2)"></span>
-  <span class="dot" onclick="currentSlide(3)"></span>
-</div>
+
 </body>
 
 </html>
